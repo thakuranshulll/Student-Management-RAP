@@ -1,0 +1,16 @@
+@EndUserText.label : 'Draft table for entity ZCSTUDENT2982'
+@AbapCatalog.enhancement.category : #EXTENSIBLE_ANY
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zstudent_d2982 {
+
+  key mandt       : mandt not null;
+  key student_id  : abap.numc(8) not null;
+  student_name    : abap.char(40);
+  course          : abap.char(30);
+  age             : abap.int2;
+  last_changed_at : abp_lastchange_tstmpl;
+  "%admin"        : include sych_bdl_draft_admin_inc;
+
+}

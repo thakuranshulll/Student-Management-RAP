@@ -1,0 +1,43 @@
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Student Master Data CDS View Entity'
+@Metadata.ignorePropagatedAnnotations: true
+
+@UI.headerInfo: {
+  typeName: 'Student',
+  typeNamePlural: 'Students',
+  title: { type: #STANDARD, value: 'student_name' }
+}
+
+define root view entity zcstudent2982
+  as select from zstudent_2982
+{
+      @UI.facet: [{
+        id: 'StudentDetails',
+        type: #IDENTIFICATION_REFERENCE,
+        label: 'Student Details',
+        position: 10
+      }]
+      @EndUserText.label: 'Student ID'
+      @UI.lineItem: [{ position: 10 }]
+      @UI.identification: [{ position: 10 }]
+  key student_id,
+
+      @EndUserText.label: 'Student Name'
+      @UI.lineItem: [{ position: 20 }]
+      @UI.identification: [{ position: 20 }]
+      student_name,
+
+      @EndUserText.label: 'Course'
+      @UI.lineItem: [{ position: 30 }]
+      @UI.identification: [{ position: 30 }]
+      course,
+
+      @EndUserText.label: 'Age'
+      @UI.lineItem: [{ position: 40 }]
+      @UI.identification: [{ position: 40 }]
+      age,
+
+      @UI.hidden: true
+      @Semantics.systemDateTime.lastChangedAt: true
+      last_changed_at
+}

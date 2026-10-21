@@ -1,0 +1,2 @@
+Binding Type = OData V4 UI.
+Service Definition = ZUI_STUDENT2982.

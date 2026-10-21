@@ -1,0 +1,15 @@
+@EndUserText.label : 'Student master data ABAP cloud practise project'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zstudent_2982 {
+
+  key client      : abap.clnt not null;
+  key student_id  : abap.numc(8) not null;
+  student_name    : abap.char(40);
+  course          : abap.char(30);
+  age             : abap.int2;
+  last_changed_at : abp_lastchange_tstmpl;
+
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'student service definition'
+define service Zui_student2982 {
+  expose zcstudent2982;
+}

@@ -1,0 +1,21 @@
+managed implementation in class zbp_cstudent2982 unique;
+strict ( 2 );
+with draft;
+define behavior for zcstudent2982 //alias <alias_name>
+persistent table zstudent_2982
+draft table zstudent_d2982
+lock master total etag last_changed_at
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  field ( mandatory : create, readonly : update ) student_id;
+}
